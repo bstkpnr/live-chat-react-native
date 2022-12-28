@@ -1,5 +1,5 @@
 import React,{useState} from 'react'
-import { TextInput, View,Text, TouchableOpacity } from 'react-native'
+import { TextInput, View,Text, TouchableOpacity,Image } from 'react-native'
 import { SafeAreaView } from 'react-native-safe-area-context'
 import { register_style } from '../../components/style/component_styles';
 import Button from '../../components/Button';
@@ -17,26 +17,46 @@ export default function Register({navigation}) {
      alert("Hatalı Giriş")
     }
 
+    useEffect(() => {
+      auth.onAuthStateChanged(customer => {
+        if (!customer) {
+          navigation.navigate('Login');
+        }
+      });
+    }, []);
+
+
+
   }
   return (
-    <View style={register_style.main}>
-        <SafeAreaView>
-            <View style={register_style.content}>
+        <SafeAreaView style={register_style.main}>
+           <View style={{paddingHorizontal:25}}>
 
-            <Text style={register_style.title}>Size yardımcı olmak için kayıt olunuz</Text>
-            <TextInput style={register_style.input} placeholder='Lütfen Adınızı Yazınızı' onChangeText={setCustomerName}
-        value={customerName} />
-            <TextInput style={register_style.input} placeholder='Lütfen Email Yazınızı' onChangeText={setCustomerMail}
+<View style={register_style.main_x}>
+
+<Image
+  source={require('../../components/style/img/register.png')} style={register_style.img}
+  />
+</View>
+  </View>
+    <View >
+
+    <View style={{flexDirection:'row',borderBottomColor:'#ccc',borderBottomWidth:1,paddingBottom:8,marginBottom:25,paddingHorizontal:20}}>
+<TextInput placeholder='Kullanıcı Adınız' style={{flex:1,paddingVertical:0,paddingHorizontal:20}}  onChangeText={setCustomerName}
+        value={customerName}/>
+      </View>
+      <View style={{flexDirection:'row',borderBottomColor:'#ccc',borderBottomWidth:1,paddingBottom:8,marginBottom:25,paddingHorizontal:20}}>
+<TextInput placeholder='Email Adresiniz' style={{flex:1,paddingVertical:0,paddingHorizontal:20}} keyboardType='email-address'  onChangeText={setCustomerMail}
         value={customerMail} />
-            <TextInput style={register_style.input} placeholder='Lütfen Password Yazınızı' onChangeText={setCustomerPassword}
-        value={customerPassword} secureTextEntry />
+      </View>
+      <View style={{flexDirection:'row',borderBottomColor:'#ccc',borderBottomWidth:1,paddingBottom:8,marginBottom:25,paddingHorizontal:20}}>
+<TextInput placeholder='Şifreniz' style={{flex:1,paddingVertical:0,paddingHorizontal:20}} secureTextEntry  onChangeText={setCustomerPassword}
+        value={customerPassword} />
+      </View>
             <View style={register_style.btnContainer}>
             <Button title="Kayıt Ol"  style={register_style.container_x} onPress={handleRegister} />
-
             </View>
-            
-            </View>
-        </SafeAreaView>
     </View>
+        </SafeAreaView>
   );
 }
