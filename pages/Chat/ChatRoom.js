@@ -51,6 +51,7 @@ export default function ChatRoom() {
           avatar:
             'https://gravatar.com/avatar/1b6f2b2a444f0cb054011f9f14b83dd6?s=400&d=robohash&r=x',
         },
+       
       },
     ]);
   }, []);
@@ -62,12 +63,15 @@ export default function ChatRoom() {
   }, []);
 
   return (
-    <GiftedChat
-      messages={messages}
-      onSend={messages => onSend(messages)}
-      user={{
-        _id: 1,
-      }}
-    />
+    <React.Fragment>
+
+      <GiftedChat
+        messages={messages}
+        onSend={messages => onSend(messages)}
+        user={{
+          _id: 1,
+        }}
+      />
+    </React.Fragment>
   );
 }

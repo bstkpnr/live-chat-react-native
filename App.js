@@ -4,13 +4,14 @@ import {createNativeStackNavigator} from '@react-navigation/native-stack';
 import LoginPage from './pages/Login/LoginPage';
 import RegisterPage from './pages/Register/RegisterPage';
 import ChatRoom from './pages/Chat/ChatRoom';
-import {main_style} from './components/style/component_styles';
+import {login_style, main_style} from './components/style/component_styles';
 import {
   TouchableOpacity,
   View,
   Text,
   Image,
 } from 'react-native';
+import Button from './components/Button';
 function App() {
   const Stack = createNativeStackNavigator();
 
@@ -27,7 +28,7 @@ function App() {
           </Text>
           <Text style={main_style.text}>Hoşgeldiniz!</Text>
           <TouchableOpacity onPress={() => navigation.navigate('Login')}>
-            <Text style={main_style.sub_text}>Lütfen Giriş Yapınız</Text>
+            <Button style={main_style.container_x} title='Lütfen Giriş Yapınız' onPress={()=>navigation.navigate('Login')} />
           </TouchableOpacity>
         </View>
       </View>

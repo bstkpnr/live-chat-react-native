@@ -37,6 +37,19 @@ const main_style = StyleSheet.create({
     fontFamily: 'Poppins-Bold',
     textAlign: 'center',
   },
+  container_x: {
+    top:5,
+    backgroundColor: '#bd59d4',
+    borderRadius: 5,
+    justifyContent: 'center',
+    display: 'flex',
+    alignItems: 'center',
+    color: 'white',
+    fontSize: 18,
+    textAlign: 'center',
+    paddingTop: 5,
+    paddingBottom:5
+  },
 });
 const login_style = StyleSheet.create({
   main: {
