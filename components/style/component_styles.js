@@ -18,7 +18,7 @@ const main_style = StyleSheet.create({
   },
   text: {
     fontSize: 22,
-    color: '#F7F7F7',
+    color: '#bd59d4',
     fontFamily: 'Poppins-Bold',
     marginTop: 10,
     textAlign: 'center',
@@ -32,17 +32,10 @@ const main_style = StyleSheet.create({
     borderColor: '#161616',
   },
   sub_text: {
-    color: '#F7F7F7',
+    color: '#bd59d4',
     marginTop: 10,
     fontFamily: 'Poppins-Bold',
     textAlign: 'center',
-  },
-  container: {
-    flex: 0.3,
-    backgroundColor: '#205295',
-    borderWidth: 1,
-    borderRadius: 20,
-    padding: 6,
   },
 });
 const login_style = StyleSheet.create({
@@ -63,7 +56,7 @@ const login_style = StyleSheet.create({
   register_text: {
     color: '#bd59d4',
     fontWeight: '700',
-    fontSize: 20,
+    fontSize: 16,
   },
   img: {
     width: 300,
@@ -156,9 +149,11 @@ const register_style = StyleSheet.create({
     color: 'white',
     fontWeight: '800',
   },
- 
+
   input: {
-  flex:1,paddingVertical:0,paddingHorizontal:20
+    flex: 1,
+    paddingVertical: 0,
+    paddingHorizontal: 20,
   },
   btnContainer: {
     flexDirection: 'row',

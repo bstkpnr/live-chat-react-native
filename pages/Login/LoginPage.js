@@ -8,21 +8,22 @@ import {
   TouchableOpacity,
 } from 'react-native';
 import {login_style} from '../../components/style/component_styles';
-import {auth,database} from '../../services';
-import { doc, getDoc, getDocs, collection, addDoc, updateDoc, deleteDoc} from "firebase/firestore";
-import Button from '../../components/Button';
 
 export default function LoginPage({navigation}) {
   const [customerName, setCustomerName] = useState('');
   const [customerPassword, setCustomerPassword] = useState('');
 
   const handleSubmit = () => {
-    if (customerName == 'Beste' && customerName != null && customerPassword=='123456') {
+    if (
+      customerName == 'Beste' &&
+      customerName != null &&
+      customerPassword == '123456'
+    ) {
+      alert('Scratona Hoşgeldiniz');
       navigation.navigate('Message');
     } else {
     }
   };
-
 
   return (
     <SafeAreaView style={login_style.main}>

@@ -5,7 +5,12 @@ import LoginPage from './pages/Login/LoginPage';
 import RegisterPage from './pages/Register/RegisterPage';
 import ChatRoom from './pages/Chat/ChatRoom';
 import {main_style} from './components/style/component_styles';
-import {TouchableOpacity, View, Text, Image} from 'react-native';
+import {
+  TouchableOpacity,
+  View,
+  Text,
+  Image,
+} from 'react-native';
 function App() {
   const Stack = createNativeStackNavigator();
 
@@ -37,10 +42,26 @@ function App() {
           component={Main}
           options={{headerShown: false}}
         />
-        <Stack.Screen name="Login" component={LoginPage} options={{headerShown: false}} />
-        <Stack.Screen name="Message" component={ChatRoom} options={{headerShown: false}} />
-        <Stack.Screen name="Register" component={RegisterPage} options={{headerShown: false}} />
-        <Stack.Screen name="ChatRoom" component={ChatRoom} options={{headerShown: false}} />
+        <Stack.Screen
+          name="Login"
+          component={LoginPage}
+          options={{headerShown: false}}
+        />
+        <Stack.Screen
+          name="Message"
+          component={ChatRoom}
+          options={{headerShown: false}}
+        />
+        <Stack.Screen
+          name="Register"
+          component={RegisterPage}
+          options={{headerShown: false}}
+        />
+        <Stack.Screen
+          name="ChatRoom"
+          component={ChatRoom}
+          options={{headerShown: false}}
+        />
       </Stack.Navigator>
     </NavigationContainer>
   );
