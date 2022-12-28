@@ -6,6 +6,8 @@ import { GiftedChat } from 'react-native-gifted-chat'
 export default function ChatRoom() {
   const [messages, setMessages] = useState([]);
 
+  
+
   useEffect(() => {
     setMessages([
       {
