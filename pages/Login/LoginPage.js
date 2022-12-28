@@ -22,6 +22,7 @@ export default function LoginPage({navigation}) {
       alert('Scratona Hoşgeldiniz');
       navigation.navigate('Message');
     } else {
+      alert("Lütfen hesap oluşturun")
     }
   };
 
