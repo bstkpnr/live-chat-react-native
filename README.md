@@ -11,11 +11,13 @@
 <li>npm install</li>
 <li>npx react-native run-android</li>
 </ul>
+
+### 👋
 <div class="d-flex align-items-center justify-content-center" style="height: 250px;">
-<img src="./public/main.png" width='250px'>
-<img src="./public/login.png" width='250px'>
-<img src="./public/register.png" width='250px'>
-<img src="./public/chat.png" width='250px'>
+<img src="./public/main.png" width='200px'>
+<img src="./public/login.png" width='200px'>
+<img src="./public/register.png" width='200px'>
+<img src="./public/chat.png" width='200px'>
 </div>
 
 
