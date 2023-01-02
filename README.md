@@ -12,5 +12,8 @@
 <li>npx react-native run-android</li>
 </ul>
 
+<img src="./public/main.png">
+<img src="./public/login.png">
+<img src="./public/register.png">
 <img src="./public/chat.png">
 
