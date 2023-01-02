@@ -12,3 +12,5 @@
 <li>npx react-native run-android</li>
 </ul>
 
+<img src="./public/chat.png">
+
