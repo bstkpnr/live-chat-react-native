@@ -5,8 +5,7 @@
    <li><a href="https://github.com/FaridSafi/react-native-gifted-chat">Gifted Chat</a></li>
 </ul>
 
-### Running a project
-## for android
+### Running a project for android
 <ul>
 <li>npm install</li>
 <li>npx react-native run-android</li>
